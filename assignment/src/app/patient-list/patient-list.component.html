@@ -1,0 +1,46 @@
+<div class="container-fluid wrapper">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h3>Hello Doctor Name</h3> 
+        </div>
+        <div class="col-md-4 text-right">
+            <a href="" routerLink="/create-new" class="btn btn-primary">Create New</a>
+        </div>
+    </div>        
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userData; let i = index">
+          <td>{{user.first_name}}</td>
+          <td>{{user.last_name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.mobile}}</td>
+          <td><p> <a class="btn btn-primary" [routerLink]="['/patient-view', user._id]"><span  class="fas fa-eye "></span></a> </td>
+          <td><p> <a class="btn btn-primary"[routerLink]="['/edit', user._id]"><span  class="fas fa-edit "></span></a> </td>
+          <td><p> <a class="btn btn-danger" data-toggle="modal" (click)="delete(user._id)"><span  class="fas fa-trash "></span></a> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="modal mt-5" id="deleteModal">
+    <div class="modal-dialog">
+      <div class="modal-content text-center"> 
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5>Delete Selected patient</h5>
+        </div>  
+      </div>
+    </div>
+  </div>

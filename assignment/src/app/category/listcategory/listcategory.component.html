@@ -1,0 +1,40 @@
+<div class="container-fluid wrapper">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h3>Category List</h3> 
+        </div>
+        <div class="col-md-4 text-right">
+            <a href="" routerLink="/create-new" class="btn btn-primary">Create New</a>
+        </div>
+    </div>        
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Category Id</th>
+          <th>Category Name</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of categoryData; let i = index">
+          <td>{{category.categoryId}}</td>
+          <td>{{category.categoryName}}</td>
+          <td><p> <a class="btn btn-primary"[routerLink]="['/edit', category.categoryId]"><span  class="fas fa-edit "></span></a> </td>
+          <td><p> <a class="btn btn-danger" data-toggle="modal" (click)="delete(category.categoryId)"><span  class="fas fa-trash "></span></a> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="modal mt-5" id="deleteModal">
+    <div class="modal-dialog">
+      <div class="modal-content text-center"> 
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h5>Delete Selected Category</h5>
+        </div>  
+      </div>
+    </div>
+  </div>

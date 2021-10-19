@@ -1,0 +1,74 @@
+<div class="container wrapper">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h3>User Details</h3> 
+        </div>
+        <div class="col-md-4 text-right">
+            <a href="" routerLink="/patient-list" class="btn btn-primary">View List</a>
+        </div>
+    </div> 
+    <div class="row patient-info">       
+        <div class="col-md-6">
+            <div class="patient-head">
+                Email
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="patient-meta">
+                {{profileData.email}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row patient-info">       
+        <div class="col-md-6">
+            <div class="patient-head">
+               Phone
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="patient-meta">
+                {{profileData.mobile}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row patient-info">       
+        <div class="col-md-6">
+            <div class="patient-head">
+                First Name
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="patient-meta">
+                {{profileData.first_name}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row patient-info">       
+        <div class="col-md-6">
+            <div class="patient-head">
+               Last Name
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="patient-meta">
+               {{profileData.last_name}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row patient-info">       
+        <div class="col-md-6">
+            <div class="patient-head">
+                Profile Pic
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img class="images" [src]="profileImage"/>
+        </div>
+    </div>
+
+  </div>
+  

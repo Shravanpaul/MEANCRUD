@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px; 
+}
+
+body {
+  box-sizing: border-box;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+.login-form {
+    margin-top: 20px;
+}
+.wrapper {
+    margin-top: 50px;
+}
+.wrapper h3 {
+  margin-bottom: 10px;
+}
+table .btn {
+  padding: 2px 3px;
+  font-size: 10px;
+}
+.patient-head {
+  font-weight: 400;
+}
+.patient-info {
+  border-bottom: 1px solid #ced4da;
+  padding: 15px 0px;
+}

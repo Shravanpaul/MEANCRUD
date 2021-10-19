@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="container wrapper">
+    <div class="row">
+        <div class="col-lg-8 offset-md-2">
+            <h3>Edit New User </h3> 
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-lg-8 offset-md-2">
+            <form class="login-form" [formGroup]="addUserForm">
+                <div class="form-group">
+                    <label for="user">First Name</label>
+                    <input type="text" class="form-control" formControlName="first_name"  placeholder="Enter First Name" id="user">
+                </div>
+                <div class="form-group">
+                    <label for="user">Last Name</label>
+                    <input type="text" class="form-control" formControlName="last_name" placeholder="Enter Last Name" id="user">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" formControlName="email" placeholder="Enter Email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" formControlName="mobile"  placeholder="Enter Phone" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="diagnosis">Profile Image</label>
+                    <input id="logo-file" type="file" class="hide" (change)="onFileChanged($event)" formControlName="myProfile">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="editProfile()">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
+  

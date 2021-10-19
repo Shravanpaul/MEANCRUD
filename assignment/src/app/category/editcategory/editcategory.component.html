@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="container wrapper">
+    <div class="row">
+        <div class="col-lg-8 offset-md-2">
+            <h3>Edit Category </h3> 
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-lg-8 offset-md-2">
+            <form class="login-form" [formGroup]="addCategoryForm">
+                <div class="form-group">
+                    <label for="user">Category Name</label>
+                    <input type="text" class="form-control" formControlName="categoryName"  placeholder="Enter Category Name" id="user">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="addCategory()">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
